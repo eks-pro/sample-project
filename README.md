@@ -13,7 +13,7 @@ This is a comprehensive sample repository created for demonstration purposes wit
 - [Development Workflow](#development-workflow)
 - [Best Practices](#best-practices)
 - [Testing](#testing)
-- [Contributing](#contributing)
+- [Help](#help)
 
 ## 🔍 Overview
 
@@ -455,31 +455,185 @@ def complex_function(data):
     return processed_data
 ```
 
-## 🤝 Contributing
+## 🆘 Help
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Write tests for your changes
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
+### Common Issues and Solutions
 
-### Contribution Guidelines
-- Write clear, documented code
-- Include tests for new features
-- Follow the existing code style
-- Update documentation as needed
+#### 1. Python Not Found Error
+**Problem**: `python: command not found` or `'python' is not recognized`
+
+**Solutions**:
+```bash
+# Try using python3 instead
+python3 app.py
+
+# Check Python installation
+which python3
+python3 --version
+
+# On Windows, try:
+py app.py
+```
+
+#### 2. Module Import Errors
+**Problem**: `ModuleNotFoundError: No module named 'calculator'`
+
+**Solutions**:
+```bash
+# Ensure you're in the correct directory
+pwd
+ls -la
+
+# Add current directory to Python path
+export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+
+# Or use relative imports
+python -m calculator
+```
+
+#### 3. Virtual Environment Issues
+**Problem**: Packages not found after installing
+
+**Solutions**:
+```bash
+# Ensure virtual environment is activated
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+
+# Verify you're in the right environment
+which python
+pip list
+
+# Reinstall packages if needed
+pip install -r requirements.txt
+```
+
+#### 4. Permission Denied Errors
+**Problem**: `PermissionError: [Errno 13] Permission denied`
+
+**Solutions**:
+```bash
+# Check file permissions
+ls -la filename.py
+
+# Make file executable
+chmod +x filename.py
+
+# Run with appropriate permissions
+sudo python app.py  # Use with caution
+```
+
+### Getting Help
+
+#### 1. GitHub Issues
+- Open an issue on the [sample-project repository](https://github.com/eks-pro/sample-project/issues)
+- Use the issue templates provided
+- Include error messages and system information
+- Provide steps to reproduce the problem
+
+#### 2. Documentation Resources
+- **Python Official Documentation**: [docs.python.org](https://docs.python.org/3/)
+- **Git Documentation**: [git-scm.com/doc](https://git-scm.com/doc)
+- **Virtual Environments**: [python.org/tutorial/venv](https://docs.python.org/3/tutorial/venv.html)
+- **PEP 8 Style Guide**: [pep8.org](https://pep8.org/)
+
+#### 3. Community Support
+- **Stack Overflow**: Tag your questions with `python` and `sample-project`
+- **Python Discord**: [discord.gg/python](https://discord.gg/python)
+- **Reddit**: [r/learnpython](https://reddit.com/r/learnpython)
+
+### Troubleshooting Checklist
+
+Before seeking help, try these steps:
+
+1. **Verify Installation**:
+   ```bash
+   python --version
+   git --version
+   pip --version
+   ```
+
+2. **Check Project Structure**:
+   ```bash
+   tree .  # or ls -la for basic listing
+   ```
+
+3. **Test Basic Functionality**:
+   ```bash
+   python -c "print('Python is working!')"
+   ```
+
+4. **Review Error Messages**:
+   - Read the full error traceback
+   - Identify the line causing the issue
+   - Check for typos in variable names and imports
+
+5. **Clean and Restart**:
+   ```bash
+   # Remove Python cache
+   find . -name "*.pyc" -delete
+   find . -name "__pycache__" -delete
+   
+   # Restart terminal/IDE
+   ```
+
+### System Requirements
+
+#### Minimum Requirements
+- **Operating System**: Windows 10+, macOS 10.14+, or Linux (Ubuntu 18.04+)
+- **Python**: 3.7 or higher
+- **RAM**: 2GB available memory
+- **Storage**: 100MB free space
+
+#### Recommended Setup
+- **Python**: 3.9 or higher
+- **IDE**: VS Code with Python extension
+- **Git**: Latest version
+- **Terminal**: PowerShell (Windows) or Terminal (macOS/Linux)
+
+### Quick Reference Commands
+
+```bash
+# Project setup
+git clone https://github.com/eks-pro/sample-project.git
+cd sample-project
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+pip install -r requirements.txt
+
+# Running code
+python app.py
+python calculator.py
+python -m unittest test_calculator.py
+
+# Development
+git status
+git add .
+git commit -m "Your commit message"
+git push origin main
+
+# Debugging
+python -i calculator.py  # Interactive mode
+python -m pdb calculator.py  # Debugger mode
+```
+
+### Contact Information
+
+For additional support:
+- **Repository Owner**: [@eks-pro](https://github.com/eks-pro)
+- **Project Repository**: [sample-project](https://github.com/eks-pro/sample-project)
+- **Issue Tracker**: [GitHub Issues](https://github.com/eks-pro/sample-project/issues)
+
+Remember to provide detailed information when asking for help:
+- Your operating system and version
+- Python version (`python --version`)
+- Complete error message
+- Steps you've already tried
+- Code that's causing the issue
 
 ## 📄 License
 
 This project is open source and available under the MIT License.
-
-## 📞 Support
-
-If you have questions or need help:
-- Open an issue on GitHub
-- Check the documentation in the `docs/` folder
-- Review examples in the `examples/` folder
 
 ## 🎯 Next Steps
 
