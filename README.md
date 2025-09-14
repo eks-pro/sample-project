@@ -14,6 +14,7 @@ This is a comprehensive sample repository created for demonstration purposes wit
 - [Best Practices](#best-practices)
 - [Testing](#testing)
 - [Help](#help)
+- [Contributing](#contributing)
 
 ## 🔍 Overview
 
@@ -630,6 +631,178 @@ Remember to provide detailed information when asking for help:
 - Complete error message
 - Steps you've already tried
 - Code that's causing the issue
+
+## 🤝 Contributing
+
+We welcome contributions to the sample-project! Your input helps make this resource better for everyone learning Python development.
+
+### How to Contribute
+
+1. **Fork the Repository**
+   ```bash
+   # Click the 'Fork' button on GitHub or use GitHub CLI
+   gh repo fork eks-pro/sample-project --clone
+   cd sample-project
+   ```
+
+2. **Create Your Feature Branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   # or
+   git checkout -b bugfix/fix-calculator-issue
+   # or
+   git checkout -b docs/improve-readme
+   ```
+
+3. **Make Your Changes**
+   - Write clean, documented code
+   - Follow the existing code style
+   - Add tests for new features
+   - Update documentation as needed
+
+4. **Test Your Changes**
+   ```bash
+   # Run existing tests
+   python -m unittest discover tests/
+   
+   # Test your specific changes
+   python test_calculator.py
+   
+   # Run your new code
+   python your_new_file.py
+   ```
+
+5. **Commit Your Changes**
+   ```bash
+   git add .
+   git commit -m "Add amazing feature
+   
+   - Detailed description of what you changed
+   - Why the change was necessary
+   - Any breaking changes or migration notes"
+   ```
+
+6. **Push to Your Branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+7. **Open a Pull Request**
+   - Go to the original repository on GitHub
+   - Click "New Pull Request"
+   - Select your fork and branch
+   - Fill out the PR template with details
+
+### Contribution Guidelines
+
+#### Code Standards
+- **Follow PEP 8**: Use consistent Python style guidelines
+- **Write Docstrings**: Document all functions, classes, and modules
+- **Add Type Hints**: Use type annotations where appropriate
+- **Keep Functions Small**: Aim for functions under 20 lines
+- **Use Meaningful Names**: Variables and functions should be self-documenting
+
+Example of good code style:
+```python
+def calculate_compound_interest(
+    principal: float, 
+    rate: float, 
+    time: int, 
+    compounds_per_year: int = 12
+) -> float:
+    """
+    Calculate compound interest using the standard formula.
+    
+    Args:
+        principal: Initial amount of money
+        rate: Annual interest rate (as decimal, e.g., 0.05 for 5%)
+        time: Time period in years
+        compounds_per_year: Number of times interest compounds per year
+    
+    Returns:
+        Final amount after compound interest
+        
+    Example:
+        >>> calculate_compound_interest(1000, 0.05, 2, 12)
+        1104.89
+    """
+    return principal * (1 + rate / compounds_per_year) ** (compounds_per_year * time)
+```
+
+#### Testing Requirements
+- **Write Tests**: All new features must include unit tests
+- **Test Coverage**: Aim for at least 80% test coverage
+- **Test Edge Cases**: Include tests for error conditions and boundary values
+- **Use Descriptive Test Names**: Test names should explain what they're testing
+
+#### Documentation Standards
+- **Update README**: Add documentation for new features
+- **Add Examples**: Include practical usage examples
+- **Comment Complex Logic**: Explain non-obvious code sections
+- **Keep Examples Current**: Ensure all examples work with current code
+
+### Types of Contributions
+
+#### 🐛 Bug Fixes
+- Fix calculation errors in existing functions
+- Resolve import or dependency issues
+- Correct documentation typos or inaccuracies
+- Fix test failures or improve test reliability
+
+#### ✨ New Features
+- Add new mathematical functions or utilities
+- Create additional example scripts
+- Implement new testing utilities
+- Add support for new Python versions
+
+#### 📚 Documentation
+- Improve README sections
+- Add inline code comments
+- Create additional tutorials or guides
+- Translate documentation to other languages
+
+#### 🧪 Testing
+- Add missing test cases
+- Improve test coverage
+- Create integration tests
+- Add performance benchmarks
+
+#### 🎨 Code Quality
+- Refactor existing code for better readability
+- Improve error handling
+- Optimize performance
+- Add type hints to existing code
+
+### Community Guidelines
+
+#### Be Respectful
+- Use welcoming and inclusive language
+- Be respectful of differing viewpoints
+- Accept constructive criticism gracefully
+- Focus on what's best for the community
+
+#### Be Collaborative
+- Help newcomers get started
+- Share knowledge and resources
+- Provide constructive feedback
+- Celebrate others' contributions
+
+### Recognition
+
+Contributors will be recognized in:
+- Repository contributor list
+- Release notes for significant contributions
+- Special mentions in documentation
+
+### Questions?
+
+If you have questions about contributing:
+- Check existing issues and discussions
+- Open a new issue with the "question" label
+- Reach out to maintainers directly
+- Join community discussions
+
+Thank you for contributing to sample-project! 🎉
 
 ## 📄 License
 
