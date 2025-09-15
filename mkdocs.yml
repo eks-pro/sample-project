@@ -1,0 +1,39 @@
+site_name: My Sample Project Documentation
+site_description: Documentation for my sample project
+site_author: eks-pro
+
+# Repository
+repo_name: sample-project
+repo_url: https://github.com/eks-pro/sample-project
+
+# Configuration
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: light-blue
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - API Reference: api.md
+  - Contributing: contributing.md
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eks-pro
