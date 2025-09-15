@@ -1,5 +1,5 @@
 site_name: My Sample Project Documentation
-site_description: Documentation for my sample project
+site_description: Documentation for my sample project with enhanced features
 site_author: eks-pro
 
 # Repository
@@ -10,30 +10,46 @@ repo_url: https://github.com/eks-pro/sample-project
 theme:
   name: material
   palette:
-    primary: blue
-    accent: light-blue
+    primary: indigo
+    accent: pink
+  features:
+    - navigation.tabs
+    - navigation.sections
 
 # Navigation
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Tutorials:
+    - Basic Usage: tutorials/basic.md
+    - Advanced Usage: tutorials/advanced.md
   - API Reference: api.md
   - Contributing: contributing.md
+  - Changelog: changelog.md
 
 # Extensions
 markdown_extensions:
   - admonition
-  - codehilite
+  - codehilite:
+      use_pygments: true
   - toc:
       permalink: true
+  - pymdownx.superfences
 
 # Plugins
 plugins:
   - search
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      type: datetime
+  - minify:
+      minify_html: true
 
 # Extra
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/eks-pro
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/eks-pro
+  version:
+    provider: mike
